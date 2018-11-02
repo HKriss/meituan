@@ -1,0 +1,180 @@
+@import "_minix.scss";
+@import "_common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box-flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(45px);
+        background: #06c1ae;
+        @include box-flex;
+        color: #fff;
+        .left {
+            width: pxTorem(80px);
+            height: pxTorem(45px);
+            @include box-flex;
+            font-size: pxTorem(14px);
+            @include justify;
+            @include align;
+            i {
+                font-size: pxTorem(18px);
+                margin-left: pxTorem(2px);
+            }
+        }
+        .center {
+            @include flex;
+            height: pxTorem(30px);
+            background: #06A495;
+            margin-top: pxTorem(8px);
+            @include box-flex;
+            span {
+                width: pxTorem(30px);
+                height: pxTorem(30px);
+                text-align: center;
+                line-height: pxTorem(30px);
+                i {
+                    font-size: pxTorem(16px);
+                }
+            }
+            input {
+                font-size: pxTorem(13px);
+            }
+        }
+        .right {
+            width: pxTorem(80px);
+            height: pxTorem(45px);
+            font-size: pxTorem(13px);
+            @include box-flex;
+            @include direction(column);
+            @include justify;
+            @include align;
+            i {
+                font-size: pxTorem(18px);
+                margin-left: pxTorem(2px);
+            }
+        }
+    }
+    section {
+        width: 100%;
+        @include flex;
+        overflow: hidden;
+        .sec {
+            width: 100%;
+        }
+        .top {
+            border-bottom: 1px solid #ccc;
+        }
+        #up {
+            width: 100%;
+            height: pxTorem(50px);
+            background: pink;
+            position: absolute;
+            left: 0;
+            top: pxTorem(-50px);
+            font-size: pxTorem(14px);
+            text-align: center;
+            line-height: pxTorem(50px);
+        }
+        .swiper-container {
+            width: 100%;
+            height: pxTorem(170px);
+            .swiper-slide {
+                @include box-flex;
+                @include flexWrap(wrap);
+                background: #fff;
+                dl {
+                    width: 20%;
+                    @include box-flex;
+                    @include align;
+                    padding-top: pxTorem(5px);
+                    @include direction(column);
+                    img {
+                        width: pxTorem(40px);
+                    }
+                    dd {
+                        font-size: pxTorem(13px);
+                    }
+                }
+            }
+        }
+        .content {
+            width: 100%;
+            // height: pxTorem(340px);
+            .subCon {
+                width: 100%;
+                position: relative;
+                .title {
+                    width: 100%;
+                    height: pxTorem(40px);
+                    font-size: pxTorem(14px);
+                    line-height: pxTorem(40px);
+                    padding: 0 0 0 pxTorem(10px);
+                    @include sizing;
+                    @include setBottomLine(#ccc);
+                }
+                .info {
+                    width: 100%;
+                    padding: 0 0 0 pxTorem(10px);
+                    @include sizing;
+                    dl {
+                        width: 100%;
+                        height: pxTorem(100px);
+                        @include box-flex;
+                        font-size: pxTorem(14px);
+                        @include setBottomLine(#ccc);
+                        dt {
+                            width: pxTorem(90px);
+                            margin: pxTorem(10px) pxTorem(10px) 0 0;
+                            img {
+                                width: pxTorem(80px);
+                            }
+                        }
+                        dd {
+                            @include box-flex;
+                            @include direction(column);
+                            padding: pxTorem(5px) 0;
+                            .tops p:nth-child(2) {
+                                font-size: pxTorem(13px);
+                                margin-bottom: pxTorem(15px);
+                            }
+                            .bottom {
+                                @include box-flex;
+                                width: pxTorem(260px);
+                                @include justify(space-between);
+                                p {
+                                    @include box-flex;
+                                    @include align;
+                                    span {
+                                        color: #06A495;
+                                        font-size: pxTorem(18px);
+                                    }
+                                    b {
+                                        font-size: pxTorem(13px);
+                                        margin-left: pxTorem(10px);
+                                    }
+                                }
+                                >span {
+                                    float: right;
+                                    font-size: pxTorem(13px);
+                                }
+                            }
+                        }
+                    }
+                }
+                #down {
+                    width: 100%;
+                    height: pxTorem(50px);
+                    background: pink;
+                    position: absolute;
+                    left: 0;
+                    bottom: pxTorem(-50px);
+                    font-size: pxTorem(14px);
+                    text-align: center;
+                    line-height: pxTorem(50px);
+                }
+            }
+        }
+    }
+}
